@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Text Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .moving-text {
+            position: absolute;
+            animation: moveText 20s infinite linear;
+        }
+
+        @keyframes moveText {
+            0% { left: 50%; transform: translateX(-50%); }
+            25% { left: 0%; transform: translateX(0); }
+            75% { left: 100%; transform: translateX(-100%); }
+            100% { left: 50%; transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body>
+   <h1> <div class="moving-text">राम</div></h1>
+</body>
+</html>
